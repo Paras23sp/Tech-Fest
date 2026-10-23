@@ -1,7 +1,7 @@
 // PriceProof demo dataset. All offers below are fictional and are not live retailer prices.
 const catalogue = [
   {
-    keywords: ["headphone", "headphones", "headset"], name: "Wireless Headphones", category: "Audio",image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4keyq2SBv57IH7uRzTrLAJABrOCPQmpm9Erbqxb04iQ&s=10", offers: [
+    keywords: ["headphone", "headphones", "headset"], name: "Wireless Headphones", category: "Audio", offers: [
       { seller: "Store A", price: 2000, delivery: 150, fees: 0, discount: 0, returns: "7-day return", warranty: "1-year warranty", condition: "No known conditional fees", source: "Demo data" },
       { seller: "Store B", price: 2100, delivery: 0, fees: 0, discount: 50, returns: "10-day return", warranty: "1-year warranty", condition: "Discount eligibility should be verified", source: "Demo data" },
       { seller: "Store C", price: 1900, delivery: 300, fees: 0, discount: 0, returns: "Replacement only", warranty: "6-month warranty", condition: "Return shipping details unknown", source: "Demo data" }
@@ -103,7 +103,6 @@ function render() {
     <div class="mobile-row"><span>Discount</span><strong>−${money(o.discount)}</strong></div>
     <div class="mobile-row"><span>Returns</span><strong>${o.returns}</strong></div>
     <div class="mobile-row"><span>Warranty</span><strong>${o.warranty}</strong></div>
-    <img class="product-image" src="${currentProduct.image}" alt="${currentProduct.name}">
     <div class="mobile-total"><span>Total known cost</span><strong>${money(total(o))}</strong></div>
     <p class="condition-note">${o.condition}</p>
   </article>`).join("");
