@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PriceProof compares known shopping costs, fees, returns and warranties.">
+  <title>PriceProof — Reveal the real cost</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">P</span><span>PriceProof<span class="brand-dot">.</span><small>SHOP SMARTER</small></span></a>
+    <span class="demo-pill"><span></span> DEMO DATA</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="spark">✦</span> THE REAL PRICE, NOT JUST THE TAG</div>
+      <h1>Find the <span>true cost</span><br>before you buy.</h1>
+      <p class="hero-copy">Compare product prices, delivery fees, returns and warranty conditions in one clear view.</p>
+      <form id="searchForm" class="search-form">
+        <span class="search-icon">⌕</span>
+        <input id="searchInput" type="search" placeholder="Try “wireless headphones” or “gaming mouse”" autocomplete="off" aria-label="Product to search">
+        <button type="submit">Compare offers <span>→</span></button>
+      </form>
+      <div class="search-hint">Try: headphones, mouse, keyboard, laptop, monitor, phone, earbuds</div>
+      <div id="searchMessage" class="search-message" role="status"></div>
+    </section>
+
+    <section class="trust-strip" aria-label="Features">
+      <div><span class="strip-icon">₹</span><span><b>True total cost</b><small>Fees included when known</small></span></div>
+      <div><span class="strip-icon">↔</span><span><b>Side-by-side</b><small>Compare three offers</small></span></div>
+      <div><span class="strip-icon">✓</span><span><b>Clear conditions</b><small>See what's missing</small></span></div>
+    </section>
+
+    <section class="results-section" id="resultsSection">
+      <div class="results-heading">
+        <div><div class="section-kicker">YOUR COMPARISON</div><h2 id="resultsTitle">Popular demo products</h2><p id="resultsSubtitle">Search a product to see example offers.</p></div>
+        <label class="sort-control">Sort by
+          <select id="sortSelect">
+            <option value="cost">Lowest known cost</option>
+            <option value="price">Item price</option>
+            <option value="returns">Return period</option>
+          </select>
+        </label>
+      </div>
+      <!-- <div class="notice"><span>ⓘ</span><p><b>Prototype note:</b> Offers and prices on this page are fictional demo data, not live prices from Amazon, Flipkart or other stores. Live integrations require authorised data-provider access.</p></div> -->
+      <div id="summaryCards" class="summary-grid"></div>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead><tr><th>Offer & seller</th><th>Item price</th><th>Delivery</th><th>Other fees</th><th>Known total</th><th>Returns / warranty</th></tr></thead>
+          <tbody id="offerRows"></tbody>
+        </table>
+      </div>
+      <div class="mobile-offers" id="mobileOffers"></div>
+      <div class="bottom-note"><span class="note-icon">!</span><span><b>Compare fairly.</b> A missing charge is not the same as a ₹0 charge. Review each seller's final checkout price and terms before purchasing.</span></div>
+    </section>
+
+    <section class="how-section">
+      <div class="section-kicker">HOW IT WORKS</div><h2>More than a price tag.</h2>
+      <div class="how-grid">
+        <article><span class="step-no">01</span><h3>Search once</h3><p>Enter the product name you want to buy.</p></article>
+        <article><span class="step-no">02</span><h3>Compare the details</h3><p>See item price, delivery, extra fees, returns and warranty together.</p></article>
+        <article><span class="step-no">03</span><h3>Choose with context</h3><p>Use the known total and policy details—not just the lowest sticker price.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">P</span><span>PriceProof<span class="brand-dot">.</span><small>HACKATHON PROTOTYPE</small></span></a><p>Built to make online shopping costs easier to understand.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
